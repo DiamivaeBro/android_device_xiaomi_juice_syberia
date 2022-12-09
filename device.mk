@@ -328,7 +328,7 @@ PRODUCT_PACKAGES += \
     JuiceFrameworksOverlay \
     JuiceSystemUIOverlay \
     JuiceTetheringOverlay \
-    WifiResTarget
+    JuiceWifiOverlay
 
 # Perf
 PRODUCT_COPY_FILES += \

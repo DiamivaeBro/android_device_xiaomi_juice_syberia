@@ -168,18 +168,43 @@ PRODUCT_PACKAGES += vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service
+
+PRODUCT_PACKAGES += \
+    vendor.display.config@1.5 \
+    vendor.display.config@1.11.vendor \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor
+
+PRODUCT_PACKAGES += \
+    memtrack.bengal \
+    gralloc.bengal \
+    hwcomposer.bengal
+
+PRODUCT_PACKAGES += \
+    libdisplayconfig.qti \
+    libdisplayconfig.qti.vendor \
+    libqdMetaData \
+    libsdmcore \
+    libsdmutils \
+    libtinyxml
+
+PRODUCT_PACKAGES += \
+    libvulkan
+
+PRODUCT_PACKAGES += \
     disable_configstore
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.display.enable_async_powermode=0
-
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.set_idle_timer_ms?=80 \
-    ro.surface_flinger.set_touch_timer_ms=200 \
-    ro.surface_flinger.set_display_power_timer_ms=1000 \
-    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    ro.surface_flinger.supports_background_blur=1
+include $(LOCAL_PATH)/configs/display_props.mk
 
 # DPM
 PRODUCT_VENDOR_PROPERTIES += \
@@ -358,7 +383,6 @@ TARGET_COMMON_QTI_COMPONENTS := \
     audio \
     av \
     bt \
-    display \
     gps \
     init \
     media-legacy \

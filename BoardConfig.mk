@@ -162,7 +162,7 @@ TARGET_COPY_OUT_PRODUCT := product
 
 # qcom/common tree
 include $(COMMON_PATH)/BoardConfigQcom.mk
-OVERRIDE_QCOM_HARDWARE_VARIANT := sm8250-common
+OVERRIDE_QCOM_HARDWARE_VARIANT := bengal
 
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp

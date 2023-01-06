@@ -376,7 +376,7 @@ PRODUCT_COPY_FILES += \
 # QC common
 $(call inherit-product, device/qcom/common/common.mk)
 TARGET_BOARD_PLATFORM := bengal
-TARGET_USE_SM8250_HALS := true
+TARGET_USE_BENGAL_HALS := true
 
 TARGET_COMMON_QTI_COMPONENTS := \
     audio \

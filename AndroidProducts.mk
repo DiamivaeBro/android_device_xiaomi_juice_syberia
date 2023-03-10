@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/syberia_juice.mk
+    $(LOCAL_DIR)/PE+_juice.mk
 
 COMMON_LUNCH_CHOICES := \
-    syberia_juice-user \
-    syberia_juice-userdebug \
-    syberia_juice-eng
+    PE+_juice-user \
+    PE+_juice-userdebug \
+    PE+_juice-eng
